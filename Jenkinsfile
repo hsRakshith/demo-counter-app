@@ -1,9 +1,10 @@
 pipeline {
  agent any 
       stages{
-        stage ( 'git checkout')
-              git branch: 'main', url: 'https://github.com/hsRakshith/demo-counter-app.git'
+        stage ( 'git checkout'){
 
+              git branch: 'main', url: 'https://github.com/hsRakshith/demo-counter-app.git'
+            
+          }
         }
       } 
-}
