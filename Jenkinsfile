@@ -1,10 +1,16 @@
 pipeline {
  agent any 
       stages{
-        stage ( 'git checkout'){
+        stage ( 'Git checkout'){
 
               steps{
-              git branch: 'main', url: 'https://github.com/hsRakshith/demo-counter-app.git'
+                git branch: 'main', url: 'https://github.com/hsRakshith/demo-counter-app.git'
+              }
+          } 
+          stage ( 'UNIT TESTING'){
+
+              steps{
+                 sh 'mvn test'
               }
           }
         }
